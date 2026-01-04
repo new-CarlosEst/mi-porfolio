@@ -6,6 +6,9 @@ import "../styles/global.css";
 
 // Saco el titulo de los props (Al devolver props un objeto clave valor tienes que poner el mismo nombre, en este caso Title)
 const { Title } = Astro.props;
+
+//importo la letra
+import '@fontsource-variable/inter';
 ---
 
 <!doctype html>
@@ -17,7 +20,7 @@ const { Title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{Title}</title>
 	</head>
-	<body>
+	<body class="">
 		<Header />
 		<!-- Este slot coge todo lo que hay dentro de la etiqueta Layout en index.astro -->
 		<slot />
