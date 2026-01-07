@@ -8,7 +8,7 @@ import "../styles/global.css";
 const { Title } = Astro.props;
 
 //importo la letra
-import '@fontsource-variable/inter';
+import "@fontsource-variable/inter";
 ---
 
 <!doctype html>
@@ -20,7 +20,7 @@ import '@fontsource-variable/inter';
 		<meta name="generator" content={Astro.generator} />
 		<title>{Title}</title>
 	</head>
-	<body class="">
+	<body class="bg-black min-h-screen">
 		<Header />
 		<!-- Este slot coge todo lo que hay dentro de la etiqueta Layout en index.astro -->
 		<slot />

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
 @theme {
-    --color-*: initial;
     --dark-mode: class;
 }
