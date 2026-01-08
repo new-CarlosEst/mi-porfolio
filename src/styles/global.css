@@ -3,3 +3,9 @@
 @theme {
     --dark-mode: class;
 }
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}

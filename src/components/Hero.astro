@@ -2,4 +2,15 @@
 
 ---
 
-<main class="min-h-screen bg-blue-500"></main>
+<main
+    class="min-h-screen relative bg-gradient-to-tl from-blue-900 via-30% via-blue-950 to-black -z-20"
+>
+    <!-- aqui va el patron de puntos del fondo, en un div separado del contenido -->
+    <div class="absolute inset-0 opacity-10 -z-10">
+        <div
+            class="absolute inset-0"
+            style="background-image: radial-gradient(circle at 1px 1px, rgb(59, 130, 246) 1px, transparent 1px); background-size: 40px 40px"
+        >
+        </div>
+    </div>
+</main>
