@@ -1,0 +1,15 @@
+---
+//Saco los props
+const { nombre, link, icon} = Astro.props;
+---
+
+<!-- Esto seran donde iran las "pills" de las redes sociales -->
+<section class="
+    flex items-center gap-2 border border-gray-300/20 rounded-full bg-gray-900 text-white px-4 py-2 
+    hover:border-blue-500
+">
+    <a href={link} target="_blank" class="flex items-center gap-2">
+        <img src={icon} alt={`logo-${nombre}`} class="w-5 h-5" />
+        <span>{nombre}</span>
+    </a>
+</section>
