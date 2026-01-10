@@ -1,5 +1,6 @@
 ---
     import Titulo from './Titulo.astro';
+    import Tecnologias from './Tecnologias.astro';
 ---
 
 <main class="min-h-screen bg-black font-sans text-white py-12 px-4">
@@ -11,7 +12,7 @@
         <div class="display flex justify-between gap-5">
             <div class="relative rounded-lg overflow-hidden shadow-2xl w-full max-w-md">
                 <img src="/code-foto.jpg" alt="workspace setup" class="w-full h-auto object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
             </div>
         </div>
 
@@ -22,14 +23,32 @@
             </p>
 
             <p>
-                Mi objetivo es convertirme en un desarrrollador web completo, con experiencia tanto en el frontend como en el backend. Aprender a crear soluciones completas, escalables y eficientes. 
+                Mi objetivo es convertirme en un desarrrollador web completo, con experiencia tanto en el frontend como en el backend. Aprender a crear soluciones innovadoras, escalables y eficientes. 
             </p>
         </div>
 
     </div>
 
     <!-- Tecnologias y habilidades -->
-    <div>
-        <h3>Tecnologías y habilidades</h3>
+    <div class="mt-14 text-center w-full/2">
+        <h3 class="text-2xl font-bold mb-6 text-blue-400">Tecnologías y Habilidades</h3>
+        <div class="flex flex-wrap gap-3 justify-center w-full lg:w-1/2 mx-auto">
+            <Tecnologias nombre="HTML" icon="/src/assets/Tecnologias/ProiconsHtml.svg"/>
+            <Tecnologias nombre="CSS" icon="/src/assets/Tecnologias/ProiconsCss.svg"/>
+            <Tecnologias nombre="JavaScript" icon="/src/assets/Tecnologias/ProiconsJavascript.svg"/>
+            <Tecnologias nombre="React" icon="/src/assets/Tecnologias/HugeiconsReact.svg"/>
+            <Tecnologias nombre="Astro" icon="/src/assets/Tecnologias/DeviconPlainAstro.svg"/>
+            <Tecnologias nombre="PHP" icon="/src/assets/Tecnologias/CibPhp.svg"/>
+            <Tecnologias nombre="Python" icon="/src/assets/Tecnologias/HugeiconsPython.svg"/>
+            <Tecnologias nombre="Java" icon="/src/assets/Tecnologias/LineiconsJava.svg"/>
+            <Tecnologias nombre="Node.js" icon="/src/assets/Tecnologias/Fa7BrandsNodeJs.svg"/>
+            <Tecnologias nombre="MySQL" icon="/src/assets/Tecnologias/DeviconPlainMysql.svg"/>
+            <Tecnologias nombre="Sqlite" icon="/src/assets/Tecnologias/DeviconPlainSqlite.svg"/>
+            <Tecnologias nombre="Oracle SQL" icon="/src/assets/Tecnologias/DeviconPlainOracle.svg"/>
+            <Tecnologias nombre="MongoDB" icon="/src/assets/Tecnologias/DeviconPlainMongodb.svg"/>
+            <Tecnologias nombre="Git" icon="/src/assets/Tecnologias/HumbleiconsGit.svg"/>
+            <Tecnologias nombre="Figma" icon="/src/assets/Tecnologias/GgFigma.svg"/>
+            <Tecnologias nombre="Docker" icon="/src/assets/Tecnologias/LineiconsDocker.svg"/>
+        </div>
     </div>
 </main>
