@@ -2,8 +2,34 @@
     import Titulo from './Titulo.astro';
 ---
 
-<main class="min-h-screen bg-black font-sans">
+<main class="min-h-screen bg-black font-sans text-white py-12 px-4">
     <Titulo title="Sobre mí" />
 
-    <!--TODO Terminar el about, con informacion detallada sobre mi y que tecnologias uso y mis softskills -->
+    <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+
+        <!-- Foto -->
+        <div class="display flex justify-between gap-5">
+            <div class="relative rounded-lg overflow-hidden shadow-2xl w-full max-w-md">
+                <img src="/code-foto.jpg" alt="workspace setup" class="w-full h-auto object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="flex flex-col gap-8 text-gray-400 w-full lg:w-1/2 text-lg">
+            <p>
+                Soy un estudiante de programación web con ganas de seguir creciendo en el campo del desarrollo de software. Me encanta crear interfaces modernas que brinden una buena experiencia al usuario. Estoy abierto a aprender nuevas tecnologías y herramientas para mejorar mis habilidades.
+            </p>
+
+            <p>
+                Mi objetivo es convertirme en un desarrrollador web completo, con experiencia tanto en el frontend como en el backend. Aprender a crear soluciones completas, escalables y eficientes. 
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Tecnologias y habilidades -->
+    <div>
+        <h3>Tecnologías y habilidades</h3>
+    </div>
 </main>
