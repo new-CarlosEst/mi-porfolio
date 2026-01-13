@@ -1,12 +1,27 @@
 ---
     import Titulo from './Titulo.astro';
-    import Proyects from './Proyects.astro';
+    import ProyectsCard from './ProyectsCard.astro';
+
+    const reactRestDesc = "Restaurante hecho con componentes de React para la parte cliente y en la parte servidor hecho una api con Node.js";
 ---
 
-<section id="proyects" class="min-h-screen bg-zinc-900">
-    <Titulo title="Proyectos" />
-    <h4>Proyectos que hice durante mi formacion. En ellos aprendi a usar tecnologias como React, Node.js, Php, gestion de BBDD tanto Sql como noSql, etc.</h4>
-    <div>
-        <!-- <Proyects foto="" title="" descripcion="" tecnologias={[]} enlace="" /> -->
-    </div>
+<section id="proyects" class="bg-zinc-900 py-20">
+	<div class="mx-auto w-full max-w-6xl px-6">
+		<Titulo title="Proyectos" />
+		<h4 class="mx-auto max-w-2xl text-center text-zinc-400 text-lg">
+			Proyectos que hice durante mi formacion. En ellos aprendi a usar tecnologias como React, Node.js, Php, gestion de BBDD tanto Sql como noSql, etc.
+		</h4>
+
+		<div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+			<ProyectsCard 
+                foto="/capturas-proyecto/react-restaurante.png" 
+                title="Restaurante React" 
+                descripcion={`${reactRestDesc}`} 
+                tecnologias={["react", "nodejs"]} 
+                enlace="https://github.com/new-CarlosEst/restaurante-react" 
+            />
+
+            
+		</div>
+	</div>
 </section>
