@@ -1,0 +1,40 @@
+---
+    import Titulo from "./Titulo.astro";
+---
+
+<section class="min-h-screen bg-black" 
+        id ="contact">
+    <Titulo title="Contáctame" />
+    <div class="flex flex-wrap">
+        <!-- Formulario -->
+        <div class="text-gray-400 pl-6 text-md gap-5">
+            <h3 class="text-white text-3xl">Enviame un mensaje</h3>
+            <form action="" class="flex flex-col gap-5">
+
+                <label for="nombre" class="flex gap-2 flex-col">Nombre
+                    <input type="text" id="nombre" placeholder="Tu nombre"/>
+                </label>
+
+                <label for="email" class="flex gap-2 flex-col">Email
+                    <input type="email" id="email" placeholder="name@example.com"/>
+                </label>
+
+                <label for="tema" class="flex gap-2 flex-col">Tema
+                    <input type="text" id="tema" placeholder="Escribe el tema..."/>
+                </label>
+
+                <label for="mensaje" class="flex gap-2 flex-col">Mensaje
+                    <textarea name="mensaje" id="" placeholder="Escribe tu mensaje..."></textarea>
+                </label>
+
+                <button type="submit" 
+                        class="bg-blue-500 p-2 rounded text-white
+                        hover:bg-blue-700 transition-colors">
+                            Enviar
+                </button>
+            </form>
+        </div>
+        <!-- Telefono, email, localizacion, etc -->
+        
+    </div>
+</section>
