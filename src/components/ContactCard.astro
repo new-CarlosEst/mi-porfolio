@@ -1,0 +1,16 @@
+---
+const {logo, tipo, info} = Astro.props;
+---
+
+<section class="bg-zinc-800 rounded flex align-center justify-center">
+    <!-- Logo del tipo de contacto -->
+    <div>
+        <img src={logo} alt={tipo}>
+    </div>
+
+    <!-- Informacion del contacto -->
+    <div>
+        <h5>{tipo}</h5>
+        <p>{info}</p>
+    </div>
+</section>

@@ -1,14 +1,16 @@
 ---
     import Titulo from "./Titulo.astro";
+    import ContactCard from "./ContactCard.astro";
 ---
 
-<section class="min-h-screen bg-black" 
-        id ="contact">
+<section class="min-h-screen bg-black" id="contact">
     <Titulo title="Contáctame" />
     <div class="flex flex-wrap">
         <!-- Formulario -->
         <div class="text-gray-400 pl-6 text-md gap-5">
             <h3 class="text-white text-3xl">Enviame un mensaje</h3>
+
+            <!-- TODO: Terminar los estilos -->
             <form action="" class="flex flex-col gap-5">
 
                 <label for="nombre" class="flex gap-2 flex-col">Nombre
@@ -34,7 +36,11 @@
                 </button>
             </form>
         </div>
+
         <!-- Telefono, email, localizacion, etc -->
-        
+        <div>
+            <h3>Información de contacto</h3>
+            <ContactCard logo="" tipo="email" info="c.estebandiez@gmail.com" />
+        </div>
     </div>
 </section>
