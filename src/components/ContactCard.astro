@@ -2,15 +2,17 @@
 const {logo, tipo, info} = Astro.props;
 ---
 
-<section class="bg-zinc-900 rounded flex align-center justify-center">
+<section class="group bg-zinc-900 border rounded-md flex justify-start gap-5 py-4 px-3 w-lg
+                hover:border-blue-500 transition-all duration-200">
     <!-- Logo del tipo de contacto -->
-    <div class="w-12 h-12 flex content-center justify-center bg-blue-400/20 rounded-md">
-        <img src={logo} alt={tipo}>
+    <div class="w-12 h-12 flex items-center justify-center bg-blue-400/20 rounded-md
+                group-hover:bg-blue-400/30 transition-colors duration-200">
+        <img src={logo} alt={`${tipo}-foto`} class="w-6 h-6">
     </div>
 
     <!-- Informacion del contacto -->
     <div>
-        <h5>{tipo}</h5>
-        <p>{info}</p>
+        <h5 class="text-gray-500 font-light">{tipo}</h5>
+        <p class="text-white">{info}</p>
     </div>
 </section>

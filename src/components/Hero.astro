@@ -72,14 +72,16 @@ import StackoverflowIcon from "../assets/Stackoverflow.svg";
 
         <!-- Botones con el contacto y el CV -->
         <div class="flex gap-4 font-medium">
-            <button
+            <!-- TODO: Cambiar el archivo hola.text por un pdf (con el cv real) -->
+            <a
+                href="/hola.txt"
+                download
                 class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-700 transition-colors"
-                >Descargar CV</button
+                >Descargar CV</a
             >
             <button
                 class="rounded px-4 py-2 border border-gray-500 bg-transparent text-white hover:bg-gray-500/20 transition-colors"
-                >Contactame</button
-            >
+                ><a href="#contact">Contactame</a></button>
         </div>
     </div>
 </main>

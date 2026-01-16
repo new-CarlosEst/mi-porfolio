@@ -2,9 +2,14 @@
     import Titulo from "./Titulo.astro";
     import ContactCard from "./ContactCard.astro";
     import InputContact from "./InputContact.astro";
+
+    //Importar el codigo de los logos
+    import email from "../assets/Email.svg?url";
+    import phone from "../assets/Phone.svg?url";
+    import location from "../assets/Location.svg?url";
 ---
 
-<section class="min-h-screen bg-black" id="contact">
+<section class="min-h-screen bg-black mb-20" id="contact">
     <Titulo title="Contáctame" />
     <div class="flex flex-wrap gap-20 justify-center">
         <!-- Formulario -->
@@ -31,11 +36,13 @@
         </div>
 
         <!-- Telefono, email, localizacion, etc -->
-        <div>
-            <h3 class="text-white text-3xl mb-8">Información de contacto</h3>
+        <div class="flex flex-col gap-8">
+            <h3 class="text-white text-3xl mb-2">Información de contacto</h3>
 
             <!-- TODO: Estilizar y colocar la card -->
-            <ContactCard logo="" tipo="email" info="c.estebandiez@gmail.com" />
+            <ContactCard logo={email} tipo="Email" info="c.estebandiez@gmail.com" />
+            <ContactCard logo={phone} tipo="Teléfono" info="+34 659 90 65 50" />
+            <ContactCard logo={location} tipo="Ubicación" info="Madrid, España" />
         </div>
     </div>
 </section>
