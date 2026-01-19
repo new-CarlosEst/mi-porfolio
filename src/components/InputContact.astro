@@ -1,8 +1,8 @@
 ---
-const {label, placeholder} = Astro.props;
+const {label, placeholder, name} = Astro.props;
 ---
 
-<label for={label} class="flex gap-2 flex-col">{label}
-    <input type="text" id={label} placeholder={placeholder} name={label} 
+<label for={name} class="flex gap-2 flex-col">{label}
+    <input type="text" id={name} placeholder={placeholder} name={name} required
         class="bg-zinc-900 px-3 py-3 rounded-lg focus:outline-blue-500 focus:outline w-lg h-12"/>
 </label>

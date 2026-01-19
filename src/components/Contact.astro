@@ -16,20 +16,20 @@
         <div class="text-gray-400 pl-6 text-md gap-5">
             <h3 class="text-white text-3xl mb-8">Enviame un mensaje</h3>
 
-            <form action="" class="flex flex-col gap-5">
+            <form action="" class="flex flex-col gap-5" id="contactForm">
 
-                <InputContact label="Nombre" placeholder="Tu nombre"/>
+                <InputContact label="Nombre" placeholder="Tu nombre" name="nombre"/>
 
-                <InputContact label="Email" placeholder="name@example.com" />
+                <InputContact label="Email" placeholder="name@example.com" name="email" />
 
-                <InputContact label="Tema" placeholder="Escribe el tema..."  />
+                <InputContact label="Tema" placeholder="Escribe el tema..." name="tema"  />
 
                 <label for="mensaje" class="flex gap-2 flex-col">Mensaje
-                    <textarea id="mensaje" placeholder="Escribe tu mensaje" name="mensaje" 
+                    <textarea id="mensaje" placeholder="Escribe tu mensaje" name="mensaje" required 
                         class="bg-zinc-900 px-3 py-3 rounded-lg focus:outline-blue-500 focus:outline w-lg h-30 resize-none"/>
                 </label>
 
-                <button type="submit" class="bg-blue-500 p-2 rounded-lg text-white hover:bg-blue-700 transition-colors">
+                <button type="submit" class="bg-blue-500 p-2 rounded-lg text-white hover:bg-blue-700 transition-colors" id="btnEnviar">
                     Enviar mensaje
                 </button>
             </form>
@@ -46,3 +46,6 @@
         </div>
     </div>
 </section>
+
+<!-- Script para enviar el email -->
+<script src="/src/scripts/sendEmail.js"></script>
