@@ -91,6 +91,7 @@ if (form) {
                 publicKey
             );
             mostrarMensaje("exito");
+            (form as HTMLFormElement).reset();
 
         }catch(error){
             console.error("Error al enviar el email:", error);

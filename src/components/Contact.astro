@@ -1,46 +1,77 @@
 ---
-    import Titulo from "./Titulo.astro";
-    import ContactCard from "./ContactCard.astro";
-    import InputContact from "./InputContact.astro";
+import Titulo from "./Titulo.astro";
+import ContactCard from "./ContactCard.astro";
+import InputContact from "./InputContact.astro";
 
-    //Importar el codigo de los logos
-    import email from "../assets/Email.svg?url";
-    import phone from "../assets/Phone.svg?url";
-    import location from "../assets/Location.svg?url";
+//Importar el codigo de los logos
+import email from "../assets/Email.svg?url";
+import phone from "../assets/Phone.svg?url";
+import location from "../assets/Location.svg?url";
 ---
 
-<section class="min-h-screen bg-black mb-20" id="contact">
+<section class="min-h-screen bg-black mb-20 px-6 sm:px-8 md:px-12" id="contact">
     <Titulo title="Contáctame" />
-    <div class="flex flex-wrap gap-20 justify-center">
+    <div
+        class="flex flex-col lg:flex-row gap-10 sm:gap-12 lg:gap-20 justify-center w-full"
+    >
         <!-- Formulario -->
-        <div class="text-gray-400 pl-6 text-md gap-5">
-            <h3 class="text-white text-3xl mb-8">Enviame un mensaje</h3>
+        <div class="text-gray-400 text-md w-full lg:w-1/2">
+            <h3 class="text-white text-xl mb-5">Enviame un mensaje</h3>
 
-            <form action="" class="flex flex-col gap-5" id="contactForm">
+            <form action="" class="flex flex-col gap-4" id="contactForm">
+                <InputContact
+                    label="Nombre"
+                    placeholder="Tu nombre"
+                    name="nombre"
+                />
 
-                <InputContact label="Nombre" placeholder="Tu nombre" name="nombre"/>
+                <InputContact
+                    label="Email"
+                    placeholder="name@example.com"
+                    name="email"
+                />
 
-                <InputContact label="Email" placeholder="name@example.com" name="email" />
+                <InputContact
+                    label="Tema"
+                    placeholder="Escribe el tema..."
+                    name="tema"
+                />
 
-                <InputContact label="Tema" placeholder="Escribe el tema..." name="tema"  />
-
-                <label for="mensaje" class="flex gap-2 flex-col">Mensaje
-                    <textarea id="mensaje" placeholder="Escribe tu mensaje" name="mensaje" required 
-                        class="bg-zinc-900 px-3 py-3 rounded-lg focus:outline-blue-500 focus:outline w-lg h-30 resize-none"/>
+                <label for="mensaje" class="flex gap-2 flex-col">
+                    <span class="text-sm">Mensaje</span>
+                    <textarea
+                        id="mensaje"
+                        placeholder="Escribe tu mensaje"
+                        name="mensaje"
+                        required
+                        class="bg-zinc-900 px-3 py-2.5 rounded-lg focus:outline-blue-500 focus:outline w-full h-28 resize-none text-sm"
+                    ></textarea>
                 </label>
 
-                <button type="submit" class="bg-blue-500 p-2 rounded-lg text-white hover:bg-blue-700 transition-colors" id="btnEnviar">
+                <button
+                    type="submit"
+                    class="bg-blue-500 py-2.5 px-4 rounded-lg text-white hover:bg-blue-700 transition-colors text-sm font-medium"
+                    id="btnEnviar"
+                >
                     Enviar mensaje
                 </button>
             </form>
         </div>
 
         <!-- Telefono, email, localizacion, etc -->
-        <div class="flex flex-col gap-8">
-            <h3 class="text-white text-3xl mb-2">Información de contacto</h3>
-            <ContactCard logo={email} tipo="Email" info="c.estebandiez@gmail.com" />
+        <div class="flex flex-col gap-4 w-full lg:w-1/2">
+            <h3 class="text-white text-xl mb-3">Información de contacto</h3>
+            <ContactCard
+                logo={email}
+                tipo="Email"
+                info="c.estebandiez@gmail.com"
+            />
             <ContactCard logo={phone} tipo="Teléfono" info="+34 659 90 65 50" />
-            <ContactCard logo={location} tipo="Ubicación" info="Madrid, España" />
+            <ContactCard
+                logo={location}
+                tipo="Ubicación"
+                info="Madrid, España"
+            />
         </div>
     </div>
 </section>
