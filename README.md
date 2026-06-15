@@ -1,4 +1,4 @@
 # mi-porfolio
 
-## Porfolio personal creado con Astro + TailwindCSS
+## ePortfolio personal creado con Astro + TailwindCSS
 

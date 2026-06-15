@@ -1,9 +1,8 @@
 ---
 import Titulo from "./Titulo.astro";
 import ProyectsCard from "./ProyectsCard.astro";
+import descriptionsProyects from "../utils/descriptions";
 
-const reactRestDesc =
-    "Restaurante hecho con componentes de React para la parte cliente y nodejs para la parte servidor. La persitencia de datos se hace con un db en mongoDB";
 ---
 
 <section id="proyects" class="bg-zinc-900 py-20 overflow-hidden">
@@ -12,18 +11,19 @@ const reactRestDesc =
         <h4
             class="mx-auto max-w-2xl text-center text-zinc-400 text-base sm:text-lg"
         >
-            Proyectos que hice durante mi formacion. En ellos aprendi a usar
-            tecnologias como React, Node.js, Php, gestion de BBDD tanto Sql como
-            noSql, etc.
+            Proyectos que hice durante mi formación. En ellos aprendí a usar
+            tecnologías como React, Node.js, Php, gestión de BBDD tanto SQL como
+            NoSQL, etc.
         </h4>
 
         <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <ProyectsCard
-                foto="/capturas-proyecto/react-restaurante.png"
-                title="Restaurante React"
-                descripcion={`${reactRestDesc}`}
-                tecnologias={["react", "nodejs", "mongodb"]}
-                enlace="https://github.com/new-CarlosEst/restaurante-react"
+            <ProyectsCard 
+                foto="/capturas-proyecto/skylimit-landing.webp"
+                title="Skylimit"
+                descripcion={descriptionsProyects["Skylimit"]}
+                tecnologias={["React", "Nestjs", "TypeScript", "TailwindCSS", "PostgreSQL", "Prisma", "Docker"]}
+                enlaceGithub="https://github.com/new-CarlosEst/SkyLimit"
+                enlaceDemo="https://skylimit-front.onrender.com/"   
             />
         </div>
     </div>
